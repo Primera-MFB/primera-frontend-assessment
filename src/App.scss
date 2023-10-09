@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  @apply flex flex-col items-center;
+  @apply flex flex-col items-center justify-center h-screen;
 }
 
 .btn {
