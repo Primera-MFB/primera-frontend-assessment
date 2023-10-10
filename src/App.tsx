@@ -1,37 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.scss'
+import "./App.scss";
+import Box from "./components/Box";
+import Check from "./components/Check";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div className='flex flex-row align-center'>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          className='btn'
-          onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Read the asessment guide on the repo README.md file
-      </p>
+      <main className="card">
+        <section className="stepper">
+          <Check status="complete" />
+          <img className="check" src="./linker.svg" alt="svg" />
+          <Check status="complete" />
+          <img className="check" src="./linker.svg" alt="svg" />
+          <Check status="progress" />
+          <Check status="none" />
+        </section>
+        <section className="steps">
+          <Box step="Step one" basket="Your basket" />
+          <Box step="Step two" basket="Your Detail" />
+          <Box step="Step three" basket="Payment" />
+          <Box step="Step four" basket="Order Complete" />
+        </section>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
